@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" href="./assets/logo.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/logo-120x120.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/logo-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/logo-16x16.png"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media.css" media="(max-width: 991px)" />
+    <script
+      src="https://kit.fontawesome.com/7b5fb2de65.js"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Federico Lopez / Full Stack Developer</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar__logo">
+          <p class="navbar__title">
+            <a href="#">Aqui estas!</a>
+          </p>
+        </div>
+        <div class="navbar__menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="navbar__links">
+          <li class="navbar__link active" data-ref="home">
+            <a href="#home">Home</a>
+          </li>
+          <li class="navbar__link" data-ref="about">
+            <a href="#about">¿Quien soy?</a>
+          </li>
+          <li class="navbar__link" data-ref="services">
+            <a href="#services">Servicios</a>
+          </li>
+          <li class="navbar__link" data-ref="portfolio">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li class="navbar__link" data-ref="contact">
+            <a href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="home" class="home">
+      <div class="home__background"></div>
+      <picture>
+        <source type="image/webp" srcset="./assets/profile.webp" />
+        <source type="image/jpeg" srcset="./assets/profile.jpg" />
+        <img class="home__profile" alt="picture profile.png" />
+      </picture>
+      <div class="home__description">
+        <span class="home__title--primary">Hola!</span>
+        <h1 class="home__title">Soy Federico Lopez</h1>
+        <span class="home__title--secondary">Full Stack Developer</span>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <h2 class="section__title">Acerca de quien soy</h2>
+        <div class="about__grid">
+          <div class="about__description">
+            <h2>Yo soy Federico Lopez, desarrollador WEB / Estudiante de ingenieria en sistemas de la informacion</h2>
+            <p>
+              Me represento como desarrollador Full Stack con experiencia en la contrucciones de aplicaciones web y sitios web. Tengo experiencia profesional trabajando con HTML - CSS - JavaScript.
+            </p>
+
+            
+            <a
+              class="button--cta"
+              href="cv federico lopez.pdf"
+              download="cv federico lopez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-file-download"></i>Descargar CV
+            </a>
+          </div>
+          <div class="about__skills">
+            <div class="skill__title">
+              <h2>Mis conocimientos:</h2>
+            </div>
+            <div class="skill__item">
+              <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB icon"/>
+              <div class="skill__name">MongoDB</div>
+            </div>
+            <div class="skill__item">
+              <img src="/assets/Express.js icon.png" alt="Express.js icon"/>
+              <div class="skill__name">Express.js</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-node"></i>
+              <div class="skill__name">Node.js</div>
+            </div>
+            <div class="skill__item">
+              <img src="/assets/Next.js icon.png" alt="Next.js icon"/>
+              <div class="skill__name">Next.js</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-react"></i>
+              <div class="skill__name">React.js</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-js"></i>
+              <div class="skill__name">JavaScript</div>
+            </div>
+            <div class="skill__item">
+              <img src="/assets/Tailwind icon.png" alt="Tailwind icon"/>
+              <div class="skill__name">Tailwind</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-github"></i>
+              <div class="skill__name">GitHub</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-git-alt"></i>
+              <div class="skill__name">GIT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2 class="section__title">Servicios</h2>
+        <h3 class="section__subtitle">Servicios que ofresco frecuentemente a mi clientes:</h3>
+        <div class="services__grid">
+          <div class="services__item">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Fully Responsive</h3>
+            <p>
+              Su sitio Web tendra las proporciones adecuadas en cualquier dispositivo, computadoras de escritorio, notebooks, tablets, celulares, heladeras y televisiones.
+              
+            </p>
+          </div>
+          <div class="services__item">
+            <i class="fas fa-pencil-ruler"></i>
+            <h3>Diseños creativos, en colaboracion con artista plastica</h3>
+            <p>
+              Propociono un diseño atracctivo, intuitivo y de rapido contacto, nos aseguramos que su cara digital sea la mejor para su negocio.
+            </p>
+          </div>
+          <div class="services__item">
+            <i class="fas fa-code"></i>
+            <h3>Desarrollo</h3>
+            <p>
+              Yo conozco la importancia del diseño correcto en un sitio web, es por eso que yo tengo la solucion para usted
+            
+              website you’ll love.
+            </p>
+          </div>
+          <div class="services__item">
+            <i class="fas fa-thumbs-up"></i>
+            <h3>Integracion de medios sociales</h3>
+            <p>
+              Yo puedo localizarte todas tus plataformas sociales en un solo lugar, a un solo click
+              Promovimendo la presencia de su sitio web en el
+              buscador.
+            </p>
+          </div>
+          <div class="services__item">
+            <i class="fas fa-tachometer-alt"></i>
+            <h3>Rendimiento</h3>
+            <p>
+              Retener a los usuarios es crucial para mejorar las conversiones.
+              Los sitios de alto rendimiento atraen y retienen a los usuarios.
+            </p>
+          </div>
+          <div class="services__item">
+            <i class="fas fa-crosshairs"></i>
+            <h3>SEO</h3>
+            <p>
+            Optimizaré su sitio con un motor de búsqueda inteligente
+              Estrategia de optimización para generar leads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="section__title">Portfolio</h2>
+        <h3 class="section__subtitle"> Aqui podras ver algunos de los proyectos en los que trabaje. // proximamente // </h3>
+        <iv class="portfolio__grid">
+          <div class="portfolio__item">
+            </div>
+          <div class="portfolio__item">
+             </div>
+     
+          
+    
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <h3 class="section__subtitle">
+          Contáctame si quieres que trabajemos juntos.
+        </h3>
+        <div class="contact__grid">
+          <a
+            href="mailto:federicoaugustolopezcardoso@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact__item">
+
+              <i class="far fa-envelope"></i>
+              <p> Me Mail</p>
+            </div>
+          </a>
+          <a
+            href="https://github.com/Fedelopezcardoso"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact__item">
+              <i class="fab fa-github"></i>
+              <p>Sigueme</p>
+            </div>
+          </a>
+          <a
+            href="https://twitter.com/IngLopCar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact__item">
+              <i class="fab fa-twitter"></i>
+              <p>Sigueme</p>
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/federico-augusto-lopez-cardoso-2a9744211"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact__item">
+              <i class="fab fa-linkedin-in"></i>
+              <p>Contactame</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Copyright © 2022. <a href="#">@IngLopCar</a> <br />
+          All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <script async src="./index.js"></script>
+  </body>
+</html>
