@@ -130,7 +130,7 @@ section {
 }
 
 .home__profile {
-   src: local(./assets/profile.jpg);
+  
   height: 250px;
   border-radius: 50%;
   margin-right: 40px;
