@@ -1,3 +1,23 @@
+
+ScrollReveal().reveal(".navbar", { delay: 250 });
+ScrollReveal().reveal(".home__profile", { delay: 350 });
+ScrollReveal().reveal(".home__title--primary", { delay: 350 });
+ScrollReveal().reveal(".home__title", { delay: 450 });
+ScrollReveal().reveal(".home__title--secondary", { delay: 550 });
+ScrollReveal().reveal(".section__title", { delay: 250 });
+ScrollReveal().reveal(".section__subtitle", { delay: 350 });
+ScrollReveal().reveal(".about__description", { delay: 350 });
+ScrollReveal().reveal(".about__summary", { delay: 450 });
+ScrollReveal().reveal(".button--cta", { delay: 550 });
+ScrollReveal().reveal(".skill__title", { delay: 450 });
+ScrollReveal().reveal(".skill__item", { delay: 450 });
+ScrollReveal().reveal(".services__item", { delay: 450 });
+ScrollReveal().reveal(".portfolio__item", { delay: 450 });
+ScrollReveal().reveal(".contact__item", { delay: 450 });
+ScrollReveal().reveal(".footer", { delay: 450 });
+
+
+
 const navbar = document.querySelector(".navbar");
 const homebg = document.querySelector(".home__background");
 const menu = document.querySelector(".navbar__menu");
@@ -59,21 +79,3 @@ function intersectionHandler(entry) {
 //     const y = (window.innerHeight - e.pageY * speed) / 100;
 //     item.style.transform = `translateX(${x}px) translateY(${y}px)`;
 //   });
-// }
-
-ScrollReveal().reveal(".navbar", { delay: 250 });
-ScrollReveal().reveal(".home__profile", { delay: 350 });
-ScrollReveal().reveal(".home__title--primary", { delay: 350 });
-ScrollReveal().reveal(".home__title", { delay: 450 });
-ScrollReveal().reveal(".home__title--secondary", { delay: 550 });
-ScrollReveal().reveal(".section__title", { delay: 250 });
-ScrollReveal().reveal(".section__subtitle", { delay: 350 });
-ScrollReveal().reveal(".about__description", { delay: 350 });
-ScrollReveal().reveal(".about__summary", { delay: 450 });
-ScrollReveal().reveal(".button--cta", { delay: 550 });
-ScrollReveal().reveal(".skill__title", { delay: 450 });
-ScrollReveal().reveal(".skill__item", { delay: 450 });
-ScrollReveal().reveal(".services__item", { delay: 450 });
-ScrollReveal().reveal(".portfolio__item", { delay: 450 });
-ScrollReveal().reveal(".contact__item", { delay: 450 });
-ScrollReveal().reveal(".footer", { delay: 450 });
