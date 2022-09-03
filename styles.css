@@ -52,15 +52,16 @@ body {
 
 .navbar {
   position: fixed;
-  
+  background: transparent;
   background-color:#414141;
   opacity: 0.7;
-
+  transition: background 0.3s;
   display: flex;
   justify-content: space-between;
   height: 60px;
   width: 100%;
   z-index: 5;
+  box-shadow: 0px 4px 3px  #191919;
 }
 
 .navbar__logo {
@@ -132,7 +133,7 @@ body {
 }
 
 .home__profile {
-  
+  height: 250px;
   height: 250px;
   border-radius: 50%;
   margin-right: 40px;
