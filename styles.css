@@ -207,6 +207,7 @@ body {
 }
 
 .skill__item {
+  text-align: center;
   font-size: 65px;
   color: var(--grey);
   padding: 35px;
