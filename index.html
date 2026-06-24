@@ -1,45 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de Federico Lopez — Full Stack Developer y Estudiante de Ingeniería en Sistemas. Proyectos web, juegos y herramientas de ciberseguridad." />
+
   <meta name="twitter:card" content="summary_large_image" />
-
   <link rel="apple-touch-icon" href="./assets/logo.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/logo-120x120.png" />
+
+  <link rel="icon" href="./assets/logo.ico">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo-16x16.png" />
   <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
-
+  <link rel="stylesheet" href="media.css" media="(max-width: 991px)" />
   <script src="https://kit.fontawesome.com/7b5fb2de65.js" crossorigin="anonymous" async></script>
-  <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js" defer></script>
-
-  <title>Federico Lopez — Full Stack Developer & Cybersecurity</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Federico Lopez / Developer - Analista en Cybersecurity</title>
 </head>
 
 <body>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" data-sr-id="0"
+    style="visibility: visible; opacity: 0.7; transition: background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">
     <div class="container">
       <div class="navbar__logo">
         <p class="navbar__title">
           <a href="#">Aqui estas!</a>
         </p>
       </div>
-      <div class="navbar__menu" id="menu-toggle" aria-label="Abrir menú">
+      <div class="navbar__menu">
         <i class="fas fa-bars"></i>
       </div>
-      <ul class="navbar__links" id="navbar-links">
+      <ul class="navbar__links">
         <li class="navbar__link active" data-ref="home">
           <a href="#home">Home</a>
         </li>
         <li class="navbar__link" data-ref="about">
-          <a href="#about">¿Quién soy?</a>
+          <a href="#about">¿Quien soy?</a>
         </li>
         <li class="navbar__link" data-ref="services">
           <a href="#services">Servicios</a>
@@ -53,56 +52,47 @@
       </ul>
     </div>
   </nav>
-
-  <!-- ========== HERO ========== -->
   <section id="home" class="home">
     <div class="home__background"></div>
-    <div class="home__orb home__orb--1"></div>
-    <div class="home__orb home__orb--2"></div>
+    <source type="image/webp" srcset="./assets/bg.webp" />
+    <picture>
+
+      <source type="image/jpg" srcset="./assets/bg.jpg" />
+      <img class="home__profile" alt="picture profile" />
+    </picture>
     <div class="home__description">
-      <span class="home__title--primary">Hola, bienvenido</span>
+      <span class="home__title--primary">Hola!</span>
       <h1 class="home__title">Soy Federico Lopez</h1>
       <span class="home__title--secondary">Full Stack Developer</span>
-      <a class="home__cta" href="#portfolio">
-        Ver proyectos <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
-    <div class="home__scroll-hint">
-      <span>Scroll</span>
-      <i class="fas fa-chevron-down"></i>
     </div>
   </section>
-
-  <!-- ========== ABOUT ========== -->
   <section id="about">
     <div class="container">
-      <h2 class="section__title">Acerca de <span>mí</span></h2>
-      <p class="section__subtitle">Un poco sobre quién soy y qué sé hacer</p>
+      <h2 class="section__title">Acerca de quien soy</h2>
       <div class="about__grid">
         <div class="about__description">
-          <h2>Yo soy Federico Lopez, desarrollador Web y estudiante de Ingeniería en Sistemas de la Información</h2>
+          <h2>Yo soy Federico Lopez, desarrollador WEB / Estudiante de ingenieria en sistemas de la informacion</h2>
           <p>
-            Me represento como desarrollador Full Stack con experiencia en la construcción de aplicaciones
-            web y sitios web. Trabajo con HTML, CSS, JavaScript y el ecosistema moderno de frameworks.
+            Me represento como desarrollador Full Stack con experiencia en la contrucciones de aplicaciones web y sitios
+            web. Tengo experiencia profesional trabajando con HTML - CSS - JavaScript.
           </p>
-          <p>
-            Además, me interesa profundamente la ciberseguridad, combinando el desarrollo con el análisis
-            de sistemas para ofrecer soluciones robustas y seguras.
-          </p>
-          <a class="button--cta" href="./assets/cv federico lopez.pdf" download="cv federico lopez" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-file-download"></i> Descargar CV
+
+
+          <a class="button--cta" href="./assets/cv federico lopez.pdf" download="cv federico lopez" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fas fa-file-download"></i>Descargar CV
           </a>
         </div>
-
         <div class="about__skills">
-          <div class="skill__title">Mis conocimientos</div>
-
+          <div class="skill__title">
+            <h2>Mis conocimientos:</h2>
+          </div>
           <div class="skill__item">
-            <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" />
+            <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB icon" />
             <div class="skill__name">MongoDB</div>
           </div>
           <div class="skill__item">
-            <img src="./assets/expressjs.svg" alt="Express.js" />
+            <img src="./assets/expressjs.svg" alt="Express.js icon">
             <div class="skill__name">Express.js</div>
           </div>
           <div class="skill__item">
@@ -110,7 +100,7 @@
             <div class="skill__name">Node.js</div>
           </div>
           <div class="skill__item">
-            <img src="./assets/cib-next-js.svg" alt="Next.js" />
+            <img src="./assets/cib-next-js.svg" alt="Next.js icon">
             <div class="skill__name">Next.js</div>
           </div>
           <div class="skill__item">
@@ -122,7 +112,7 @@
             <div class="skill__name">JavaScript</div>
           </div>
           <div class="skill__item">
-            <img src="./assets/tailwind-css.svg" alt="Tailwind" />
+            <img src="./assets/tailwind-css.svg" alt="Tailwind icon">
             <div class="skill__name">Tailwind</div>
           </div>
           <div class="skill__item">
@@ -138,271 +128,296 @@
     </div>
   </section>
 
-  <!-- ========== SERVICES ========== -->
   <section id="services">
     <div class="container">
       <h2 class="section__title">Servicios</h2>
-      <p class="section__subtitle">Lo que ofrezco frecuentemente a mis clientes</p>
+      <h3 class="section__subtitle">Servicios que ofrezco frecuentemente a mis clientes:</h3>
       <div class="services__grid">
-
         <div class="services__item">
           <i class="fas fa-mobile-alt"></i>
           <h3>Fully Responsive</h3>
-          <p>Su sitio web tendrá las proporciones adecuadas en cualquier dispositivo: computadoras, notebooks, tablets y celulares.</p>
-        </div>
+          <p>
+            Su sitio Web tendra las proporciones adecuadas en cualquier dispositivo, computadoras de escritorio,
+            notebooks, tablets, celulares, heladeras y televisiones.
 
+          </p>
+        </div>
         <div class="services__item">
           <i class="fas fa-pencil-ruler"></i>
-          <h3>Diseños creativos</h3>
-          <p>Proporciono un diseño atractivo, intuitivo y de rápido contacto para que su cara digital sea la mejor.</p>
+          <h3>Diseños creativos, en colaboracion con artista plastica</h3>
+          <p>
+            Propociono un diseño atracctivo, intuitivo y de rapido contacto, nos aseguramos que su cara digital sea la
+            mejor para su negocio.
+          </p>
         </div>
-
         <div class="services__item">
           <i class="fas fa-code"></i>
-          <h3>Desarrollo Web</h3>
-          <p>Conozco la importancia del código limpio y el diseño correcto. Tengo la solución para su proyecto.</p>
-        </div>
+          <h3>Desarrollo</h3>
+          <p>
+            Conozco la importancia del diseño correcto en un sitio web, es por eso que tengo la solucion para usted.
+          </p>
+          <p>
 
+          </p>
+        </div>
         <div class="services__item">
           <i class="fas fa-thumbs-up"></i>
-          <h3>Integración de Redes Sociales</h3>
-          <p>Logro centralizar todas sus plataformas sociales en un solo lugar, a un solo click, promoviendo su presencia digital.</p>
+          <h3>Integracion de medios sociales</h3>
+          <p>
+            Logro localizarte todas tus plataformas sociales en un solo lugar, a un solo click
+            Promovimendo la presencia de su sitio web en el
+            buscador.
+          </p>
         </div>
-
         <div class="services__item">
           <i class="fas fa-tachometer-alt"></i>
           <h3>Rendimiento</h3>
-          <p>Los sitios de alto rendimiento que cargan rápido atraen y retienen usuarios. Optimizo cada detalle.</p>
+          <p>
+            Retener a los usuarios es crucial para mejorar las conversiones.
+            Los sitios de alto rendimiento que cargan la pagina rapido atraen y retienen a los usuarios.
+          </p>
         </div>
-
         <div class="services__item">
           <i class="fas fa-crosshairs"></i>
           <h3>SEO</h3>
-          <p>Optimizaré su sitio con un motor de búsqueda inteligente y estrategias de posicionamiento para generar leads.</p>
+          <p>
+            Optimizaré su sitio con un motor de búsqueda inteligente
+            Estrategia de optimización para generar leads.
+          </p>
         </div>
-
       </div>
     </div>
   </section>
-
-  <!-- ========== PORTFOLIO ========== -->
   <section id="portfolio">
     <div class="container">
       <h2 class="section__title">Portfolio</h2>
-      <p class="section__subtitle">Algunos de los proyectos en los que trabajé — pasá el mouse sobre las tarjetas</p>
+      <h3 class="section__subtitle"> Aqui podras ver algunos ejemplos de los proyectos en los que trabaje </h3>
       <div class="portfolio__grid">
-
-        <!-- Proyecto 1: Simon Dice -->
-        <div class="card-3d">
-          <div class="card-3d__inner">
-            <div class="card-3d__shine"></div>
-            <div class="card-3d__image">
-              <img src="./assets/maxresdefault.jpg" alt="Simon Dice — Juego de memoria en JavaScript" loading="lazy" />
-              <span class="card-3d__tag">JS · HTML · CSS</span>
+        <div class="portfolio__item" data-sr-id="36"
+          style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
+          <picture>
+            <source type="image/jpg" srcset="./assets/maxresdefault.jpg">
+            <img class="portfolio__img" alt="portfolio item">
+          </picture>
+          <div class="portfolio__description">
+            <h3 class="portfolio__description--title">Simon dice</h3>
+            <p class="portfolio__description--text">
+              Web Application: JS
+            </p>
+            <div class="buttons__container">
+              <a class="button" href="https://fedelopezcardoso.github.io/portfolio/Simon-says-game-master/"
+                target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
+              </a>
+              <a class="button" href="https://github.com/Fedelopezcardoso/portfolio/tree/main/Simon-says-game-master"
+                target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Repositorio
+              </a>
             </div>
-            <div class="card-3d__body">
-              <h3 class="card-3d__title">Simon Dice</h3>
-              <p class="card-3d__text">Juego de memoria clásico implementado con JavaScript vanilla, secuencias de colores y sonidos.</p>
-              <div class="card-3d__buttons">
-                <a class="card-3d__btn card-3d__btn--primary" href="https://fedelopezcardoso.github.io/portfolio/Simon-says-game-master/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-globe-americas"></i> Demo
-                </a>
-                <a class="card-3d__btn card-3d__btn--secondary" href="https://github.com/Fedelopezcardoso/portfolio/tree/main/Simon-says-game-master" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
+          </div>
+        </div>
+        <div class="portfolio__item" data-sr-id="36"
+          style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
+          <picture>
+            <source type="image/jpg" srcset="./assets/webmc.jpg">
+            <img class="portfolio__img" alt="portfolio item">
+          </picture>
+          <div class="portfolio__description">
+            <h3 class="portfolio__description--title">PAGINA WEB DE INMOBILIARIA con buscador con posible enlace a MYSQL
+            </h3>
+            <p class="portfolio__description--text">
+              Web Application: JS HTML CSS MYSQL
+            </p>
+            <div class="buttons__container">
+              <a class="button" href="https://fedelopezcardoso.github.io/proyectoinmobiliaria/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
+              </a>
+              <a class="button" href="https://github.com/Fedelopezcardoso/proyectoinmobiliaria" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Repositorio
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="portfolio__item" data-sr-id="36"
+          style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
+          <picture>
+            <source type="image/jpg" srcset="./assets/inglopfotominiatura.jpg">
+            <img class="portfolio__img" alt="portfolio item">
+          </picture>
+          <div class="portfolio__description">
+            <h3 class="portfolio__description--title">PAGINA WEB</h3>
+            <p class="portfolio__description--text">
+              Web Application: JS HTML CSS
+            </p>
+            <div class="buttons__container">
+              <a class="button" href="http://www.inglop.com.ar/" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
+              </a>
+              <a class="button" href="http://www.inglop.com.ar/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Repositorio
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Proyecto 2: Inmobiliaria -->
-        <div class="card-3d">
-          <div class="card-3d__inner">
-            <div class="card-3d__shine"></div>
-            <div class="card-3d__image">
-              <img src="./assets/webmc.jpg" alt="Página web inmobiliaria con buscador" loading="lazy" />
-              <span class="card-3d__tag">JS · HTML · CSS · MySQL</span>
-            </div>
-            <div class="card-3d__body">
-              <h3 class="card-3d__title">Inmobiliaria con Buscador</h3>
-              <p class="card-3d__text">Página web de inmobiliaria con buscador de propiedades y posible enlace a base de datos MySQL.</p>
-              <div class="card-3d__buttons">
-                <a class="card-3d__btn card-3d__btn--primary" href="https://fedelopezcardoso.github.io/proyectoinmobiliaria/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-globe-americas"></i> Demo
-                </a>
-                <a class="card-3d__btn card-3d__btn--secondary" href="https://github.com/Fedelopezcardoso/proyectoinmobiliaria" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 3: Inglop -->
-        <div class="card-3d">
-          <div class="card-3d__inner">
-            <div class="card-3d__shine"></div>
-            <div class="card-3d__image">
-              <img src="./assets/inglopfotominiatura.jpg" alt="Página web Inglop" loading="lazy" />
-              <span class="card-3d__tag">JS · HTML · CSS</span>
-            </div>
-            <div class="card-3d__body">
-              <h3 class="card-3d__title">Inglop — Sitio Web</h3>
-              <p class="card-3d__text">Diseño y desarrollo de sitio web corporativo completo, con diseño responsive y animaciones.</p>
-              <div class="card-3d__buttons">
-                <a class="card-3d__btn card-3d__btn--primary" href="http://www.inglop.com.ar/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-globe-americas"></i> @PRODUCCION
-                </a>
-               
-                </a>
-              </div>
+        <div class="portfolio__item" data-sr-id="36"
+          style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
+          <picture>
+            <source type="image/png" srcset="./assets/snake_game_miniatura.png">
+            <img class="portfolio__img" alt="portfolio item">
+          </picture>
+          <div class="portfolio__description">
+            <h3 class="portfolio__description--title">SNAKE_GAME</h3>
+            <p class="portfolio__description--text">
+              Web Game: JS HTML CSS
+            </p>
+            <div class="buttons__container">
+              <a class="button" href="https://fedelopezcardoso.github.io/snake_game/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
+              </a>
+              <a class="button" href="https://github.com/Fedelopezcardoso/snake_game" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Repositorio
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Proyecto 4: Snake Game -->
-        <div class="card-3d">
-          <div class="card-3d__inner">
-            <div class="card-3d__shine"></div>
-            <div class="card-3d__image">
-              <img src="./assets/snake_game_miniatura.png" alt="Snake Game en JavaScript" loading="lazy" />
-              <span class="card-3d__tag">JS · HTML · Canvas</span>
-            </div>
-            <div class="card-3d__body">
-              <h3 class="card-3d__title">Snake Game</h3>
-              <p class="card-3d__text">Clásico juego de la serpiente construido con JavaScript puro y Canvas API en el navegador.</p>
-              <div class="card-3d__buttons">
-                <a class="card-3d__btn card-3d__btn--primary" href="https://fedelopezcardoso.github.io/snake_game/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-globe-americas"></i> Demo
-                </a>
-                <a class="card-3d__btn card-3d__btn--secondary" href="https://github.com/Fedelopezcardoso/snake_game" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
+
+        <div class="portfolio__item" data-sr-id="36"
+          style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
+          <picture>
+            <source type="image/png" srcset="./assets/dron_fpv_game_miniatura.png">
+            <img class="portfolio__img" alt="portfolio item">
+          </picture>
+          <div class="portfolio__description">
+            <h3 class="portfolio__description--title">DRON_FPV_GAME</h3>
+            <p class="portfolio__description--text">
+              Web Game: JS HTML CSS and library p5.js
+            </p>
+            <div class="buttons__container">
+              <a class="button" href="https://fedelopezcardoso.github.io/DRON_FPV_GAME/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
+              </a>
+              <a class="button" href="https://github.com/Fedelopezcardoso/dron_fpv_game" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Repositorio
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Proyecto 5: Dron FPV Game -->
-        <div class="card-3d">
-          <div class="card-3d__inner">
-            <div class="card-3d__shine"></div>
-            <div class="card-3d__image">
-              <img src="./assets/dron_fpv_game_miniatura.png" alt="Dron FPV Game con p5.js" loading="lazy" />
-              <span class="card-3d__tag">JS · p5.js · HTML</span>
-            </div>
-            <div class="card-3d__body">
-              <h3 class="card-3d__title">Dron FPV Game</h3>
-              <p class="card-3d__text">Juego de drones en primera persona creado con la librería p5.js para gráficos en tiempo real.</p>
-              <div class="card-3d__buttons">
-                <a class="card-3d__btn card-3d__btn--primary" href="https://fedelopezcardoso.github.io/DRON_FPV_GAME/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-globe-americas"></i> Demo
-                </a>
-                <a class="card-3d__btn card-3d__btn--secondary" href="https://github.com/Fedelopezcardoso/dron_fpv_game" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 6: Dashboard Ormuz -->
-        <div class="card-3d">
-          <div class="card-3d__inner">
-            <div class="card-3d__shine"></div>
-            <div class="card-3d__image">
-              <img src="./ormuz.png" alt="Dashboard Estrecho de Ormuz" loading="lazy" />
-              <span class="card-3d__tag">JS · Dashboard · DB</span>
-            </div>
-            <div class="card-3d__body">
-              <h3 class="card-3d__title">Dashboard Estrecho Ormuz</h3>
-              <p class="card-3d__text">Dashboard interactivo con integración a base de datos (instancia desactivada) para análisis geopolítico.</p>
-              <div class="card-3d__buttons">
-                <a class="card-3d__btn card-3d__btn--primary" href="https://fedelopezcardoso.github.io/Dashboard_Estrecho_Ormuz/#" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-globe-americas"></i> Demo
-                </a>
-                <a class="card-3d__btn card-3d__btn--secondary" href="https://github.com/Fedelopezcardoso/Dashboard_Estrecho_Ormuz" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
+                <div class="portfolio__item" data-sr-id="36"
+          style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
+          <picture>
+            <source type="image/png" srcset="./assets/ormuz.png">
+            <img class="portfolio__img" alt="portfolio item">
+          </picture>
+          <div class="portfolio__description">
+            <h3 class="portfolio__description--title">Dashboard Estrecho Ormuz</h3>
+            <p class="portfolio__description--text">
+              Dashboard: JS HTML CSS + integracion con base de datos (instancia no levantada)
+            </p>
+            <div class="buttons__container">
+              <a class="button" href="https://fedelopezcardoso.github.io/Dashboard_Estrecho_Ormuz/#" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
+              </a>
+              <a class="button" href="https://github.com/Fedelopezcardoso/Dashboard_Estrecho_Ormuz" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Repositorio
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Proyecto 7: Fortinet CLI -->
-        <div class="card-3d">
-          <div class="card-3d__inner">
-            <div class="card-3d__shine"></div>
-            <div class="card-3d__image">
-              <img src="./Fortinetclicommand.png" alt="Fortinet CLI Command Generator" loading="lazy" />
-              <span class="card-3d__tag">JS · Cybersecurity</span>
-            </div>
-            <div class="card-3d__body">
-              <h3 class="card-3d__title">Fortinet CLI Command</h3>
-              <p class="card-3d__text">Generador de comandos CLI para dispositivos Fortinet. Herramienta de ciberseguridad para administradores de red.</p>
-              <div class="card-3d__buttons">
-                <a class="card-3d__btn card-3d__btn--primary" href="https://fedelopezcardoso.github.io/Fortinet-cli-command/" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-globe-americas"></i> Demo
-                </a>
-                <a class="card-3d__btn card-3d__btn--secondary" href="https://github.com/Fedelopezcardoso/Fortinet-cli-command" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
+                <div class="portfolio__item" data-sr-id="36"
+          style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
+          <picture>
+            <source type="image/png" srcset="./assets/Fortinetclicommand.png">
+            <img class="portfolio__img" alt="portfolio item">
+          </picture>
+          <div class="portfolio__description">
+            <h3 class="portfolio__description--title">Fortinet-cli-command</h3>
+            <p class="portfolio__description--text">
+              Generador de comando para fortinet 
+            </p>
+            <div class="buttons__container">
+              <a class="button" href="https://fedelopezcardoso.github.io/Fortinet-cli-command/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
+              </a>
+              <a class="button" href="https://github.com/Fedelopezcardoso/Fortinet-cli-command" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> Repositorio
+              </a>
             </div>
           </div>
         </div>
+
+
+
+
+        <div class="portfolio__item">
+        </div>
+
+
 
       </div>
-    </div>
-  </section>
 
-  <!-- ========== CONTACT ========== -->
+
+
+  </section>
   <section id="contact">
     <div class="container">
       <h2 class="section__title">Contacto</h2>
-      <p class="section__subtitle">Contáctame si querés que trabajemos juntos</p>
+      <h3 class="section__subtitle">
+        Contáctame si quieres que trabajemos juntos.
+      </h3>
       <div class="contact__grid">
-
-        <a href="mailto:federicoaugustolopezcardoso@gmail.com" target="_blank" rel="noopener noreferrer" class="contact__link">
+        <a href="mailto:federicoaugustolopezcardoso@gmail.com" target="_blank" rel="noopener noreferrer">
           <div class="contact__item">
+
             <i class="far fa-envelope"></i>
-            <p>Mi Mail</p>
+            <p> Mi Mail</p>
           </div>
         </a>
-
-        <a href="https://github.com/Fedelopezcardoso" target="_blank" rel="noopener noreferrer" class="contact__link">
+        <a href="https://github.com/Fedelopezcardoso" target="_blank" rel="noopener noreferrer">
           <div class="contact__item">
             <i class="fab fa-github"></i>
-            <p>GitHub</p>
+            <p>Sigueme en Github</p>
           </div>
         </a>
-
-        <a href="https://twitter.com/IngLopCar" target="_blank" rel="noopener noreferrer" class="contact__link">
+        <a href="https://twitter.com/IngLopCar" target="_blank" rel="noopener noreferrer">
           <div class="contact__item">
             <i class="fab fa-twitter"></i>
-            <p>Twitter / X</p>
+            <p>Sigueme en Twitter</p>
           </div>
         </a>
-
-        <a href="https://www.linkedin.com/in/fedelopezcardoso/" target="_blank" rel="noopener noreferrer" class="contact__link">
+        <a href="https://www.linkedin.com/in/fedelopezcardoso/" target="_blank" rel="noopener noreferrer">
           <div class="contact__item">
             <i class="fab fa-linkedin-in"></i>
-            <p>LinkedIn</p>
+            <p>Contactame</p>
           </div>
         </a>
-
       </div>
     </div>
   </section>
-
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <div class="container" style="display:block;">
-      <p>Copyright &copy; 2026. <a href="#">@IngLopCar</a> — All Rights Reserved</p>
+    <div class="container">
+      <p>
+        Copyright © 2026. <a href="#">@IngLopCar</a> <br />
+        All Rights Reserved
+      </p>
     </div>
   </footer>
-
-  <script src="./index.js" defer></script>
+  <script async src="./index.js"></script>
 </body>
 
 </html>
