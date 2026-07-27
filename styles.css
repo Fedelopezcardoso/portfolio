@@ -1324,3 +1324,151 @@ a.contact__link {
   .demo-terminal__body { padding: 16px 16px 20px; }
 }
 
+/* ============================================================
+   DEMO — 4 FEATURES EXTRA
+   Score · Network Graph · Privacy Tips · How It Works
+   ============================================================ */
+
+.demo-score-section,
+.demo-netgraph-section,
+.demo-tips-section,
+.demo-howto-section {
+  background: #08080f;
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  border-top: none;
+  padding: 28px 32px;
+  display: none;
+  animation: row-reveal 0.4s ease forwards;
+}
+
+.demo-score-section.visible,
+.demo-netgraph-section.visible,
+.demo-tips-section.visible,
+.demo-howto-section.visible { display: block; }
+
+.demo-howto-section { border-radius: 0 0 var(--radius-lg) var(--radius-lg); padding: 0; }
+
+.demo-score-header,
+.demo-netgraph-header,
+.demo-tips-header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 20px; font-family: 'Inter', sans-serif;
+}
+.demo-score-header i, .demo-netgraph-header i, .demo-tips-header i { color: #22c55e; font-size: 1rem; }
+.demo-score-header h3, .demo-netgraph-header h3, .demo-tips-header h3 {
+  font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.3px;
+}
+
+/* ── Score Gauge ── */
+.demo-score-body { display: flex; gap: 32px; align-items: flex-start; }
+.demo-score-gauge-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; flex-shrink: 0; }
+.demo-score-gauge { width: 140px; height: 140px; }
+.gauge-bg  { fill: none; stroke: rgba(255,255,255,0.05); stroke-width: 12; }
+.gauge-fill {
+  fill: none; stroke: #22c55e; stroke-width: 12; stroke-linecap: round;
+  stroke-dasharray: 339.3; stroke-dashoffset: 339.3;
+  transform: rotate(-90deg); transform-origin: 70px 70px;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1), stroke 0.6s ease;
+}
+.gauge-fill.score-low  { stroke: #ef4444; }
+.gauge-fill.score-mid  { stroke: #eab308; }
+.gauge-fill.score-high { stroke: #22c55e; }
+.gauge-num {
+  font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 900;
+  fill: var(--text-primary); text-anchor: middle; dominant-baseline: middle;
+}
+.gauge-label { font-family: 'Inter', sans-serif; font-size: 11px; fill: var(--text-muted); text-anchor: middle; }
+.gauge-level {
+  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 800;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 20px; border: 1px solid currentColor; transition: color 0.5s ease;
+}
+.gauge-level.score-low  { color: #ef4444; background: rgba(239,68,68,0.08); }
+.gauge-level.score-mid  { color: #eab308; background: rgba(234,179,8,0.08); }
+.gauge-level.score-high { color: #22c55e; background: rgba(34,197,94,0.08); }
+
+.demo-score-factors { display: flex; flex-direction: column; gap: 8px; flex: 1; font-family: 'Inter', sans-serif; }
+.score-factor { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--text-secondary); opacity: 0; animation: row-reveal 0.3s ease forwards; }
+.score-factor__badge { font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; }
+.score-factor__badge.good    { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.2); }
+.score-factor__badge.bad     { background: rgba(239,68,68,0.1); color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
+.score-factor__badge.neutral { background: rgba(148,163,184,0.1); color: #94a3b8; border: 1px solid rgba(148,163,184,0.15); }
+
+/* ── Network Graph SVG ── */
+.demo-netgraph-wrap { width: 100%; overflow-x: auto; }
+#netgraph-svg { width: 100%; max-width: 620px; display: block; margin: 0 auto; }
+.ng-line { stroke: rgba(34,197,94,0.25); stroke-width: 2; stroke-dasharray: 6 4; }
+.ng-circle { fill: rgba(255,255,255,0.04); stroke-width: 1.5; }
+.ng-you    { stroke: #7c3aed; }
+.ng-isp    { stroke: #06b6d4; }
+.ng-dns    { stroke: #eab308; }
+.ng-server { stroke: #22c55e; }
+.ng-icon    { font-size: 22px; text-anchor: middle; dominant-baseline: middle; }
+.ng-icon-sm { font-size: 14px; text-anchor: middle; dominant-baseline: middle; }
+.ng-node-label    { font-family:'Inter',sans-serif; font-size:9px; font-weight:700; letter-spacing:1px; fill:var(--text-muted); text-anchor:middle; text-transform:uppercase; }
+.ng-node-label-sm { font-family:'Inter',sans-serif; font-size:7px; font-weight:700; letter-spacing:0.5px; fill:var(--text-muted); text-anchor:middle; }
+.ng-sublabel    { font-family:'Courier New',monospace; font-size:9px; fill:#22c55e; text-anchor:middle; }
+.ng-sublabel-sm { font-family:'Courier New',monospace; font-size:7px; fill:#eab308; text-anchor:middle; }
+.ng-packet { fill: #22c55e; filter: drop-shadow(0 0 4px #22c55e); opacity: 0.9; }
+
+/* ── Privacy Tips ── */
+.demo-tips-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; font-family: 'Inter', sans-serif; }
+.tip-card {
+  background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px; padding: 16px 18px; display: flex; gap: 14px; align-items: flex-start;
+  opacity: 0; animation: row-reveal 0.35s ease forwards;
+}
+.tip-card__icon  { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+.tip-card__title { font-size: 0.82rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.tip-card__text  { font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; }
+.tip-card--warn  { border-color: rgba(239,68,68,0.2); }
+.tip-card--ok    { border-color: rgba(34,197,94,0.2); }
+.tip-card--info  { border-color: rgba(6,182,212,0.2); }
+
+/* ── How It Works ── */
+.demo-howto-btn {
+  width: 100%; background: #0a0a14; border: none;
+  border-top: 1px solid rgba(34,197,94,0.18); color: var(--text-secondary);
+  padding: 18px 32px; display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 600;
+  cursor: pointer; transition: var(--transition);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.demo-howto-btn:hover { background: rgba(34,197,94,0.05); color: var(--text-primary); }
+.demo-howto-btn span i { color: #22c55e; margin-right: 8px; }
+.demo-howto-chevron { transition: transform 0.35s ease; }
+.demo-howto-chevron.open { transform: rotate(180deg); }
+.demo-howto-btn.open { border-radius: 0; border-bottom: 1px solid rgba(34,197,94,0.1); }
+.demo-howto-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1); }
+.demo-howto-body.open { max-height: 700px; }
+.demo-howto-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  padding: 0 32px 28px; background: #05050d;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.demo-howto-block { padding: 20px 16px; border-bottom: 1px solid rgba(34,197,94,0.06); font-family: 'Inter', sans-serif; }
+.demo-howto-block:nth-child(odd)  { border-right: 1px solid rgba(34,197,94,0.06); }
+.demo-howto-block:nth-child(3),
+.demo-howto-block:nth-child(4)   { border-bottom: none; }
+.demo-howto-block h4 { font-size:0.82rem; font-weight:700; color:#22c55e; margin-bottom:10px; display:flex; align-items:center; gap:7px; }
+.demo-howto-block p  { font-size:0.77rem; color:var(--text-muted); line-height:1.7; }
+.demo-howto-block code { background:rgba(34,197,94,0.1); color:#4ade80; padding:1px 5px; border-radius:4px; font-family:'Courier New',monospace; font-size:0.75rem; }
+.howto-code { background:rgba(0,0,0,0.4); border:1px solid rgba(34,197,94,0.1); border-radius:8px; padding:12px 14px; font-family:'Courier New',monospace; font-size:0.72rem; color:#4ade80; margin-top:10px; overflow-x:auto; line-height:1.7; white-space:pre; }
+.howto-list { list-style:none; display:flex; flex-direction:column; gap:5px; }
+.howto-list li { font-size:0.77rem; color:var(--text-muted); line-height:1.5; }
+.howto-link { color:#22c55e; font-size:0.78rem; font-weight:600; transition:var(--transition); }
+.howto-link:hover { color:#4ade80; }
+
+/* Aumentar altura máxima del panel abierto */
+.demo-panel.open { max-height: 3000px !important; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .demo-score-body  { flex-direction: column; align-items: center; }
+  .demo-tips-grid   { grid-template-columns: 1fr; }
+  .demo-howto-grid  { grid-template-columns: 1fr; padding: 0 16px 20px; }
+  .demo-howto-block:nth-child(odd) { border-right: none; }
+  .demo-score-section, .demo-netgraph-section, .demo-tips-section { padding: 20px 16px; }
+}
+
+

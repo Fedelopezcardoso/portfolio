@@ -457,9 +457,137 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
 
+          </div><!-- /.demo-terminal__body -->
+        </div><!-- /.demo-terminal -->
+
+        <!-- ── SCORE DE EXPOSICIÓN DIGITAL ─────────────────── -->
+        <div class="demo-score-section" id="demo-score-section">
+          <div class="demo-score-header">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Tu puntaje de exposición digital</h3>
+          </div>
+          <div class="demo-score-body">
+            <!-- Gauge circular SVG -->
+            <div class="demo-score-gauge-wrap">
+              <svg class="demo-score-gauge" viewBox="0 0 140 140">
+                <circle class="gauge-bg"   cx="70" cy="70" r="54" />
+                <circle class="gauge-fill" cx="70" cy="70" r="54" id="gauge-fill" />
+                <text class="gauge-num"    x="70"  y="64"  id="gauge-num">0</text>
+                <text class="gauge-label"  x="70"  y="84">/ 100</text>
+              </svg>
+              <div class="gauge-level" id="gauge-level">—</div>
+            </div>
+            <!-- Factores -->
+            <div class="demo-score-factors" id="demo-score-factors"></div>
           </div>
         </div>
-      </div>
+
+        <!-- ── VISUALIZACIÓN DE RED ANIMADA ────────────────── -->
+        <div class="demo-netgraph-section" id="demo-netgraph-section">
+          <div class="demo-netgraph-header">
+            <i class="fas fa-network-wired"></i>
+            <h3>Recorrido de tus datos en tiempo real</h3>
+          </div>
+          <div class="demo-netgraph-wrap">
+            <svg id="netgraph-svg" viewBox="0 0 620 170" preserveAspectRatio="xMidYMid meet">
+              <!-- Líneas de conexión -->
+              <line x1="116" y1="72" x2="244" y2="72" class="ng-line" />
+              <line x1="256" y1="72" x2="364" y2="72" class="ng-line" />
+              <line x1="376" y1="72" x2="504" y2="72" class="ng-line" />
+
+              <!-- Nodo: VOS -->
+              <g class="ng-node" transform="translate(60,72)">
+                <circle r="46" class="ng-circle ng-you" />
+                <text y="0"  class="ng-icon">🖥️</text>
+                <text y="18" class="ng-node-label">VOS</text>
+              </g>
+              <!-- Nodo: ISP -->
+              <g class="ng-node" transform="translate(250,72)">
+                <circle r="46" class="ng-circle ng-isp" />
+                <text y="0"  class="ng-icon">🏢</text>
+                <text y="18" class="ng-node-label">ISP / ASN</text>
+              </g>
+              <!-- Nodo: DNS -->
+              <g class="ng-node" transform="translate(370,72)">
+                <circle r="30" class="ng-circle ng-dns" />
+                <text y="0"  class="ng-icon-sm">🔍</text>
+                <text y="16" class="ng-node-label-sm">DNS</text>
+              </g>
+              <!-- Nodo: Servidor -->
+              <g class="ng-node" transform="translate(560,72)">
+                <circle r="46" class="ng-circle ng-server" />
+                <text y="0"  class="ng-icon">☁️</text>
+                <text y="18" class="ng-node-label">SERVIDOR</text>
+              </g>
+
+              <!-- Etiquetas IP/ASN dinámicas -->
+              <text x="60"  y="138" class="ng-sublabel" id="ng-your-ip">—</text>
+              <text x="250" y="138" class="ng-sublabel" id="ng-isp-name">—</text>
+              <text x="370" y="116" class="ng-sublabel-sm" id="ng-asn">—</text>
+              <text x="560" y="138" class="ng-sublabel">github.io</text>
+
+              <!-- Paquetes animados (JS los mueve) -->
+              <circle class="ng-packet" id="pkt-1" cx="116" cy="72" r="5" />
+              <circle class="ng-packet" id="pkt-2" cx="220" cy="72" r="5" />
+              <circle class="ng-packet" id="pkt-3" cx="320" cy="72" r="5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- ── CONSEJOS DE PRIVACIDAD ──────────────────────── -->
+        <div class="demo-tips-section" id="demo-tips-section">
+          <div class="demo-tips-header">
+            <i class="fas fa-lock"></i>
+            <h3>Consejos de privacidad para vos</h3>
+          </div>
+          <div class="demo-tips-grid" id="demo-tips-grid"></div>
+        </div>
+
+        <!-- ── ¿CÓMO FUNCIONA? ──────────────────────────────── -->
+        <div class="demo-howto-section" id="demo-howto-section">
+          <button class="demo-howto-btn" id="demo-howto-btn">
+            <span><i class="fas fa-code"></i> ¿Cómo funciona esto técnicamente?</span>
+            <i class="fas fa-chevron-down demo-howto-chevron" id="demo-howto-chev"></i>
+          </button>
+          <div class="demo-howto-body" id="demo-howto-body">
+            <div class="demo-howto-grid">
+              <div class="demo-howto-block">
+                <h4><i class="fas fa-globe"></i> API usada</h4>
+                <p>Se hace un <code>fetch()</code> a <strong>ipapi.co/json</strong> — una API pública, gratuita y sin clave. Devuelve en ~100ms: IP, ASN, ISP, ciudad, país, coordenadas del nodo y zona horaria.</p>
+                <pre class="howto-code">fetch('https://ipapi.co/json/')
+  .then(r => r.json())
+  .then(d => console.log(d.ip, d.asn, d.org))</pre>
+              </div>
+              <div class="demo-howto-block">
+                <h4><i class="fas fa-browser"></i> Datos del navegador</h4>
+                <p>El navegador expone datos sin ningún permiso especial a través de la API de JavaScript:</p>
+                <pre class="howto-code">navigator.userAgent   // browser + OS
+navigator.language    // idioma
+navigator.doNotTrack  // preferencia DNT
+screen.width/height   // resolución
+Intl.DateTimeFormat() // zona horaria local</pre>
+              </div>
+              <div class="demo-howto-block">
+                <h4><i class="fas fa-ban"></i> Lo que NO se puede obtener</h4>
+                <ul class="howto-list">
+                  <li>❌ Nombre real o identidad</li>
+                  <li>❌ Dirección física exacta</li>
+                  <li>❌ Historial de navegación</li>
+                  <li>❌ Contraseñas o datos del sistema</li>
+                  <li>❌ IP privada (LAN) sin permiso</li>
+                  <li>✅ Sólo lo que el ISP hace público</li>
+                </ul>
+              </div>
+              <div class="demo-howto-block">
+                <h4><i class="fas fa-fingerprint"></i> ¿Qué es el fingerprinting?</h4>
+                <p>La combinación de resolución, idioma, navegador, zona horaria y más puede crear un perfil único sin cookies. Hasta el 87% de los usuarios son identificables sólo con estos datos.</p>
+                <p style="margin-top:10px"><a href="https://coveryourtracks.eff.org/" target="_blank" rel="noopener" class="howto-link">→ Probá Cover Your Tracks (EFF)</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.demo-panel -->
 
     </div>
   </section>
