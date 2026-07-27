@@ -21,16 +21,6 @@
 
   <title>Federico Lopez — Full Stack Developer & Cybersecurity</title>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0YCBQPFYE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P0YCBQPFYE');
-</script>
-  
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -395,6 +385,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div><!-- /.portfolio__grid -->
     </div><!-- /.container -->
   </section><!-- /#portfolio -->
+
+  <!-- ========== NETWORK DEMO ========== -->
+  <section id="network-demo">
+    <div class="container">
+
+      <!-- Trigger / acordeón -->
+      <div class="demo-trigger" id="demo-trigger">
+        <div class="demo-trigger__left">
+          <div class="demo-trigger__icon">
+            <i class="fas fa-satellite-dish"></i>
+          </div>
+          <div class="demo-trigger__text">
+            <h2>¿Sabías que sé cosas sobre vos?</h2>
+            <p>Demo en vivo · Networking + APIs · Hacé click para descubrir</p>
+          </div>
+        </div>
+        <div class="demo-trigger__btn" id="demo-btn">
+          <span class="demo-btn-label">Iniciar análisis</span>
+          <i class="fas fa-chevron-down demo-chevron"></i>
+        </div>
+      </div>
+
+      <!-- Panel desplegable con terminal -->
+      <div class="demo-panel" id="demo-panel">
+        <div class="demo-terminal">
+
+          <!-- Barra superior estilo macOS -->
+          <div class="demo-terminal__header">
+            <div class="demo-terminal__dots">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="demo-terminal__title">network_scan.sh — visitor_analysis</span>
+            <span class="demo-terminal__status" id="demo-status">IDLE</span>
+          </div>
+
+          <!-- Cuerpo de la terminal -->
+          <div class="demo-terminal__body">
+
+            <!-- Línea de comando con cursor -->
+            <div class="demo-line--cmd">
+              <span class="demo-prompt">visitor@portfolio:~$</span>
+              <span class="demo-cmd-text" id="demo-cmd-text"></span>
+              <span class="demo-cursor" id="demo-cursor">█</span>
+            </div>
+
+            <!-- Barra de progreso -->
+            <div class="demo-progress-wrap" id="demo-progress-wrap">
+              <div class="demo-progress">
+                <div class="demo-progress__bar" id="demo-progress-bar"></div>
+              </div>
+              <span class="demo-progress__label" id="demo-progress-label">Inicializando...</span>
+            </div>
+
+            <!-- Resultados -->
+            <div class="demo-results" id="demo-results"></div>
+
+            <!-- Disclaimer -->
+            <div class="demo-disclaimer" id="demo-disclaimer">
+              <div class="demo-disclaimer__icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="demo-disclaimer__text">
+                <strong>Todo lo anterior es información pública.</strong>
+                Cualquier servidor en internet puede ver estos datos cuando visitás una página web — 
+                IP de origen, ISP, ubicación aproximada del nodo de red, navegador y sistema operativo. 
+                Nada fue almacenado, nada fue enviado a un servidor externo. 
+                Esta demo existe para mostrar lo que un desarrollador con conocimiento de networking 
+                puede hacer con información libremente disponible, y para que el usuario tome conciencia 
+                de su huella digital en internet.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ========== CONTACT ========== -->
   <section id="contact">
